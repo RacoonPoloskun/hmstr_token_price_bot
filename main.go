@@ -6,14 +6,14 @@ import (
 	"time"
 )
 
-const DELAY = 5 * time.Minute
+const delay = 5 * time.Minute
 const tokenPair = "HMSTRUSDT"
 
 func main() {
 	telegramBot := internal.NewTelegramBot()
 	bybit := internal.NewTokenPricer()
 
-	ticker := time.NewTicker(DELAY)
+	ticker := time.NewTicker(delay)
 
 	log.Println("Bot started!")
 
